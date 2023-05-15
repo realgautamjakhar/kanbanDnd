@@ -2,7 +2,7 @@ import { Droppable, Draggable } from "@hello-pangea/dnd";
 import React from "react";
 import Card from "./Card";
 
-const Column = ({ column }) => {
+const Column = ({ column }: any) => {
   return (
     <Droppable droppableId={column.id.toString()}>
       {(provided, snapshot) => (
@@ -16,7 +16,7 @@ const Column = ({ column }) => {
             {provided.placeholder}
             <p>{column.number}</p>
           </div>
-          {column.cards?.map((card, index) => (
+          {column.cards?.map((card: any, index: any) => (
             <Draggable
               key={card.id}
               draggableId={card.id.toString()}

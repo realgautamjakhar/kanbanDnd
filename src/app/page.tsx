@@ -57,6 +57,7 @@ export default function Home() {
 
     const destinationCol = board.find((i) => i.id == destination.droppableId);
     const sourceCol = board.find((i) => i.id == source.droppableId);
+    if (!sourceCol || !destinationCol) return;
     const task = sourceCol.cards[source.index];
 
     if (sourceCol.id == destinationCol.id) {
